@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <title>JavaScript</title>
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    </head>
+
+    <!-- Cuerpo de la pagina -->
+    <body>
+        <!-- Barra de navegación -->
+        <header>
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md fixed-top navbar-dark justify-content-center" style="background-color: #050700;">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                            <span class="navbar-toggler-icon">
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="navbar-nav w-100 justify-content-between">
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Inicio">Inicio</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Calculadora">Calculadora</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Adivinanza">La Adivinanza</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Loteria">Loteria</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Lista">Lista de deberes</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Rut">Crea tu Rut</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Parte central del cuerpo de la pagina -->
+        <main style="padding-top: 150px;">
+            <!-- Inicio de la pagina -->
+            <section id="Inicio" class="container" style="padding-top: 350px; padding-bottom: 150px;">
+                
+            </section>
+
+            <!-- Calculadora -->
+            <section id="Calculadora" class="container" style="padding-top: 350px; padding-bottom: 150px;">
+                <div class="container col-md-3">
+                    <div class="row">
+                        <div class="col-md-12" id="titulo">
+                            <h2 >Calculadora</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container col-md-3">
+                    <div class="row align-items-center">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                
+                            <div class="justify-content-center">
+                                
+                                <table class="table table-dark">
+                                    <tr>
+                                        <td colspan="4"><input type="text" name="visor" id="visor" class="col-xs-12 col-sm-12 col-md-12" /></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="button" id="boton7" value="7" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton8" value="8" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton9" value="9" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton/" value="/" class="btn btn-info" onclick="btn_dividir(value);" /></td>
+                                        <td><input type="button" id="boton*" value="*" class="btn btn-info" onclick="btn_multiplicacion(value);"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="button" id="boton4" value="4" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton5" value="5" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton6" value="6" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton-" value="-" class="btn btn-info" onclick="btn_resta(value);" /></td>
+                                        <td><input type="button" id="suma+" value="+" class="btn btn-info" onclick="btn_suma(value);"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="button" id="boton1" value="1" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton2" value="2" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton3" value="3" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton%" value="%" class="btn btn-info" onclick="btn_porcentaje(value);"/></td>
+                                        <td><input type="button" id="boton=" value="=" class="btn btn-info" onclick="btn_igual(value);"/></td>
+                                        
+                                    <tr>
+                                        <td><input type="button" id="boton." value="." class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td><input type="button" id="boton0" value="0" class="btn btn-secondary" onclick="boton(value);"/></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><input type="button" id="botonC" value="C" class="btn btn-danger" onclick="reset(value);"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Juego de la Adivinanza -->
+            <section id="Adivinanza" class="container-fluid py-5">
+                <div class="container-lg col-lg-8 form-prueba">
+                    <h1 class="text-center my-5">Juego de Adivinanza</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-8">
+                            <form id="guess-form">
+                                <div class="mb-3">
+                                    <label for="guess-input" class="form-label">Introduce un número (1 al 100):</label>
+                                    <input type="number" class="form-control" id="guess-input" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Adivinar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-md-10 col-lg-8">
+                            <div id="result"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!-- Loteria -->
+            <section id="Loteria" class="container" style="padding-top: 100px; padding-bottom: 150px;">
+                <div class="container col-md-9 form-prueba">
+                    <h1 class="text-center my-5">Juego de Lotería</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <form id="lottery-form">
+                                <div class="mb-3">
+                                    <label for="number-1" class="form-label">Número 1:</label>
+                                    <input type="number" class="form-control" id="number-1" min="1" max="99" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="number-2" class="form-label">Número 2:</label>
+                                    <input type="number" class="form-control" id="number-2" min="1" max="99" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="number-3" class="form-label">Número 3:</label>
+                                    <input type="number" class="form-control" id="number-3" min="1" max="99" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="number-4" class="form-label">Número 4:</label>
+                                    <input type="number" class="form-control" id="number-4" min="1" max="99" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="number-5" class="form-label">Número 5:</label>
+                                    <input type="number" class="form-control" id="number-5" min="1" max="99" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="number-6" class="form-label">Número 6:</label>
+                                    <input type="number" class="form-control" id="number-6" min="1" max="99" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Comprobar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-6">
+                            <div id="result2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lista de Tareas -->
+            <section id="Lista" class="container" style="padding-top: 350px; padding-bottom: 250px;">
+                <div class="container my-5 col-md-7 form-prueba">
+                    <h1 class="mb-3">Lista de Tareas</h1>
+                    <div class="input-group mb-3">
+                        <input type="text" id="newTaskInput" class="form-control" placeholder="Ingrese una nueva tarea...">
+                        <button id="addTaskButton" class="btn btn-primary">Agregar</button>
+                    </div>
+                    <ul id="taskList" class="list-group">
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Calculadora Rut -->
+            <section id="Rut" class="container" style="padding-top: 150px; padding-bottom: 250px;">
+                <div class="container col-md-7 form-prueba">
+                    <h1 class="mt-3">Calculadora de Dígito Verificador del RUN</h1>
+                    <form id="rut-form" class="mt-3">
+                        <div class="mb-3">
+                            <label for="rut" class="form-label">Ingrese el RUT (sin dígito verificador):</label>
+                            <input type="text" id="rut" name="rut" class="form-control" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary mx-auto">Calcular Dígito Verificador</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+
+    <!-- Pie de pagina -->
+    <footer class="footer mt-auto py-3 bg-body-tertiary text-center">
+        <div class="container">
+            <p>2023 &copy; - Universidad de Talca</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="calculadora.js"></script>
+    <script src="adivinanza.js"></script>
+    <script src="loteria.js"></script>
+    <script src="deberes.js"></script>
+    <script src="rut.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,27 @@
+.form-prueba{
+    width: 80%;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.245), rgba(255, 255, 255, 0.245)), url("https://cdn.wallpapersafari.com/98/44/A3KW4w.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+.section {
+    height: 100%;
+    width: 100%;
+    margin: 150px 0; /* Establece un margen vertical de 50px */
+}
